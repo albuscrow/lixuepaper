@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfApplication1.Page1Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        Title="申明" Height="900" Width="900">
+    <StackPanel Margin="30,30,30,30">
+        <TextBlock x:Name="textBlock" TextWrapping="Wrap" xml:space="preserve" RenderTransformOrigin="0.5,0.5" FontSize="20">
+尊敬的先生/女士：
+        您好！
+        我是华东师范大学应用心理专业的硕士生。非常感谢您在百忙之中抽出时间参与此次实验研究。本次调查旨在探索电子游戏的情绪评价对游戏体验和消费行为倾向的影响的影响。本调查采取匿名的方式进行，且调查结果仅用于硕士论文学术研究。您的回答将会受到严格的保密，请不要有所顾虑，根据您的实际情况或真实感受回答即可。参与本研究，您会获得相应的报酬。如果完成所有任务，您会获得总体价值为人民币10元左右的礼物；如果中途退出您将无法获得被试费。您可以随时退出实验，且不会遭到任何惩罚。
+
+        非常感谢您的支持！谢谢
+        </TextBlock>
+        <Button x:Name="button" Content="同意" Margin="300,100,300,0" Height="50" FontSize="30" Click="button_Click"/>
+    </StackPanel>
+</Window>

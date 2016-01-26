@@ -1,0 +1,88 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="调查问卷" Height="800" Width="1100">
+    <StackPanel>
+        <TextBlock FontSize="35" Background="BlueViolet" Foreground="White" x:Name="titleText">第三部分：您玩电子游戏以后的感受。</TextBlock>
+
+        <ListView x:Name="stage1" Height="650" VerticalAlignment="Top" Visibility="Visible" >
+            <ListView.ItemTemplate >
+                <DataTemplate >
+                    <StackPanel>
+                        <TextBlock FontSize="28" Text="{Binding question}"/>
+                        <Separator Height="15" Background="Transparent"/>
+                        <StackPanel Orientation="Horizontal" Tag="{Binding tag}">
+                            <RadioButton FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <Image Source="{Binding answers[0]}"></Image>
+                            </RadioButton>
+                            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Width="24" Background="Transparent"/>
+
+                            <RadioButton FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <Image Source="{Binding answers[1]}"></Image>
+                            </RadioButton>
+                            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Width="24" Background="Transparent"/>
+
+                            <RadioButton FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <Image Source="{Binding answers[2]}"></Image>
+                            </RadioButton>
+                            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Width="24" Background="Transparent"/>
+
+                            <RadioButton FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <Image Source="{Binding answers[3]}"></Image>
+                            </RadioButton>
+                            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Width="24" Background="Transparent"/>
+
+                            <RadioButton FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <Image Source="{Binding answers[4]}"></Image>
+                            </RadioButton>
+
+                        </StackPanel>
+                        <Separator Height="30" Background="Transparent"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ListView x:Name="stage2and3" Height="650" VerticalAlignment="Top" Visibility="Collapsed">
+            <ListView.ItemTemplate >
+                <DataTemplate >
+                    <StackPanel>
+                        <TextBlock FontSize="28" Text="{Binding question}"/>
+                        <Separator Height="15" Background="Transparent"/>
+                        <StackPanel Orientation="Horizontal" Tag="{Binding tag}">
+                            <RadioButton FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <TextBlock Text="{Binding answers[0]}" FontSize="24"/>
+                            </RadioButton>
+                            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Width="24" Background="Transparent"/>
+
+                            <RadioButton FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <TextBlock Text="{Binding answers[1]}" FontSize="24"/>
+                            </RadioButton>
+                            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Width="24" Background="Transparent"/>
+
+                            <RadioButton FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <TextBlock Text="{Binding answers[2]}" FontSize="24"/>
+                            </RadioButton>
+                            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Width="24" Background="Transparent"/>
+
+                            <RadioButton FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <TextBlock Text="{Binding answers[3]}" FontSize="24"/>
+                            </RadioButton>
+                            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Width="24" Background="Transparent"/>
+
+                            <RadioButton FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <TextBlock Text="{Binding answers[4]}" FontSize="24"/>
+                            </RadioButton>
+
+                        </StackPanel>
+                        <Separator Height="30" Background="Transparent"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="next" Margin="300,10,300,0" Content="下一页" VerticalAlignment="Bottom" Width="Auto" Height="Auto" FontSize="30" Click="next_Click"/>
+    </StackPanel>
+</Window> 
